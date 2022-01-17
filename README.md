@@ -1,5 +1,14 @@
 ![App Brewery Banner](https://github.com/londonappbrewery/Images/blob/master/AppBreweryBanner.png)
 
+## My version
+I am following the flutter course on Udemy. Given by Angela Yu. 
+I made this repo public so other students can look at my work and learn ( usually howto NOT do it...)
+Just as I on a regular basis look at other students repo's just to learn. 
+
+This repo is not going to be published as an app in any of the app stores. 
+
+Regards, Martijn. 
+
 
 # Xylophone 🎹
 
