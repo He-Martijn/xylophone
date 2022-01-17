@@ -12,7 +12,7 @@ dependencies:
 
   #The other dependencies :
   audioplayers: ^0.20.1
-  english_words: ^4.0.0
+  #english_words: ^4.0.0
   cupertino_icons: ^0.1.2
   # Use Audioplayers dependency version 0.17.4
 
