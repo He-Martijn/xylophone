@@ -7,7 +7,10 @@ import 'package:audioplayers/audioplayers.dart';
 // For those of us with an Apple mac m1 :
 // https://stackoverflow.com/questions/69055694/cocoapod-error-tried-to-install-all-the-possible-way-on-m1
 
-void main() => runApp(XylophoneApp());
+void main() {
+  print('void main is called');
+  runApp(XylophoneApp());
+}
 
 class XylophoneApp extends StatelessWidget {
 
