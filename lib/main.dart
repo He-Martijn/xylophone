@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 //import 'package:english_words/english_words.dart';
 import 'package:audioplayers/audioplayers.dart';
-// In the lesson this is something with audiod_cache.dart, but appearantly not anymore :
+// In the lesson this is something with audio_cache.dart, but appearantly not anymore :
 // https://github.com/bluefireteam/audioplayers/blob/main/packages/audioplayers/doc/audio_cache.md
 
 // For those of us with an Apple mac m1 :
@@ -24,6 +24,14 @@ class XylophoneApp extends StatelessWidget {
     }
   }
 
+  Expanded buttonFunc ({int soundToPlay, Color colorToUSe}){
+    print('buttonFunc is called');
+    return Expanded(
+      child: TextButton(onPressed: (){playSound(soundToPlay);},child: Container(color: colorToUSe,)),
+    );
+  }
+
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -39,29 +47,15 @@ class XylophoneApp extends StatelessWidget {
             color: Colors.grey.shade900,
             child: Column( // The colors : red, orange, yellow, green, darkgreen, blue, purple
               children: [
-                Expanded(
-                  child: TextButton(onPressed: (){playSound(1);},child: Container(color: Colors.red,)),
-                ),
-                Expanded(
-                  child: TextButton(onPressed: (){playSound(2);},child: Container(color: Colors.orange,)),
-                ),
-                Expanded(
-                  child: TextButton(onPressed: (){playSound(3);},child: Container(color: Colors.yellow,)),
-                ),
-                Expanded(
-                  child: TextButton(onPressed: (){playSound(4);},child: Container(color: Colors.green.shade300,)),
-                ),
-                Expanded(
-                  child: TextButton(onPressed: (){playSound(5);},child: Container(color: Colors.green.shade800,)),
-                ),
-                Expanded(
-                  child: TextButton(onPressed: (){playSound(6);},child: Container(color: Colors.blue,)),
-                ),
-                Expanded(
-                  child: TextButton(onPressed: (){playSound(7);},child: Container(color: Colors.purple,)),
-                ),
+                buttonFunc(soundToPlay: 1, colorToUSe: Colors.red),
+                buttonFunc(soundToPlay: 2, colorToUSe: Colors.orange),
+                buttonFunc(soundToPlay: 3, colorToUSe: Colors.yellow),
+                buttonFunc(soundToPlay: 4, colorToUSe: Colors.green.shade300),
+                buttonFunc(soundToPlay: 5, colorToUSe: Colors.green.shade900),
+                buttonFunc(soundToPlay: 6, colorToUSe: Colors.blue),
+                buttonFunc(soundToPlay: 7, colorToUSe: Colors.purple),
               ],
-            )
+            ),
           ),
         ),
       ),
